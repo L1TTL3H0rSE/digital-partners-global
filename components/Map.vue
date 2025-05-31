@@ -175,12 +175,10 @@ onUnmounted(() => {
       >
         Сбросить точки
       </button>
-      <p v-if="mapStore.roadsStatus === 'pending'">
+      <p v-if="mapStore.roadsStatus == 'pending'">
         Загрузка данных о дорогах...
       </p>
-      <p v-else-if="mapStore.roadsStatus === 'error'">
-        Ошибка загрузки данных.
-      </p>
+      <p v-else-if="mapStore.roadsStatus == 'error'">Ошибка загрузки данных.</p>
       <p v-else-if="!mapStore.startPoint">
         Кликните на карту, чтобы поставить начальную точку.
       </p>
